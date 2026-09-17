@@ -1,0 +1,193 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Job ad rewrite — Multifield</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="A free before-and-after rewrite of the Carpenter job ad for Multifield, by Melbourne Digital Partners."><style>
+:root{--ink:#161a22;--mute:#5c6470;--line:#e6e9ef;--soft:#f6f7fa;--acc:#1d4ed8;--accd:#1e3a8a;--hl:#fde68a;--bad:#b91c1c}
+*{box-sizing:border-box}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:clip}
+:focus-visible{outline:3px solid #1d4ed8;outline-offset:3px}
+.offer :focus-visible,.ribbon :focus-visible,.stick :focus-visible{outline-color:#fde68a}
+.offer:focus{outline:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ribbon{background:#0f172a;color:#fff;font-size:.86rem;padding:6px 16px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.ribbon a{background:var(--hl);color:#1f2937;font-weight:800;min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;text-decoration:none;white-space:nowrap}
+@media(max-width:820px){.ribbon{font-size:.8rem;padding:9px 14px}.ribbon .long,.ribbon a{display:none}}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+@media(min-width:600px){.wrap{padding:0 20px}}
+header.hero{padding:40px 0 32px;border-bottom:1px solid var(--line)}
+@media(max-width:820px){header.hero{padding:26px 0 24px}}
+.kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:800}
+h1{font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.12;margin:8px 0 12px;letter-spacing:-.02em}
+h1,h2,h3,.offer h2{font-weight:750}
+h1 q{quotes:"\\201C" "\\201D"}
+.lead{color:var(--mute);font-size:1.05rem;max-width:64ch;margin:0}
+.lead q{font-style:italic;color:var(--ink)}
+.meta{display:flex;gap:10px 18px;flex-wrap:wrap;margin-top:18px;font-size:.9rem;color:var(--mute)}
+.meta b{color:var(--ink)}
+.meta>span{min-width:0}
+/* hero stage: product 1, before -> after */
+.stage{margin-top:22px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.seg{display:none}
+.panes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
+.pane{padding:18px 20px;min-width:0;overflow-wrap:anywhere}
+.pane.before{background:var(--soft);border-right:1px solid var(--line)}
+.tag{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--mute);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.after .tag{color:var(--acc)}
+.before .copy{color:var(--mute);font-style:italic;white-space:pre-wrap}
+.before .empty{color:var(--bad);font-style:normal;font-weight:600}
+.pane.after h2{font-size:1.1rem;margin:0 0 8px;letter-spacing:-.01em}
+.pane.after p{margin:0 0 6px}
+.more{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem;font-weight:700;color:var(--acc);text-decoration:none}
+.gsim{padding:14px 20px 18px;border-top:1px dashed var(--line);background:#fff}
+.gsim .lbl,.seo .cap{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--mute);margin-bottom:6px}
+@media(max-width:820px){
+ .seg{display:flex;gap:6px;padding:10px 10px 0;background:var(--soft)}
+ .seg button{flex:1;min-height:44px;font:inherit;font-size:.82rem;font-weight:800;letter-spacing:.02em;padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--mute);cursor:pointer}
+ .seg button[aria-pressed=true]{background:#0f172a;color:#fff;border-color:#0f172a}
+ .panes{display:block}
+ .pane{display:none}.pane.on{display:block}
+ .pane.before{border-right:0}
+ .js .pane.on{animation:fadeIn .32s ease both}
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* full comparison */
+section.prod{padding:44px 0;border-bottom:1px solid var(--line)}
+.prod h2{font-size:1.35rem;margin:0 0 4px}
+.prod .sub{color:var(--mute);margin:0 0 22px;font-size:.95rem;overflow-wrap:anywhere}
+.prod .sub a,.alt a,.box a{color:inherit;display:inline-block;padding:12px 0;margin:-12px 0;text-underline-offset:3px}
+.prod .sub a{color:var(--acc)}
+.ba{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;align-items:start}
+@media(max-width:820px){.ba{grid-template-columns:minmax(0,1fr)}}
+.col,.ba>*,.offer .wrap>*{min-width:0}
+.col{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:#fff;overflow-wrap:anywhere}
+.col.before{background:var(--soft)}
+.ba>.before{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto}
+@media(max-width:820px){.ba>.before{position:static;max-height:none;overflow:visible}}
+.wc{font-size:.8rem;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums;flex:none}
+.after .wc{color:var(--acc);border-color:#c7d2fe;background:#eef2ff}
+.after h3{font-size:1.15rem;margin:0 0 10px;letter-spacing:-.01em}
+.after p{margin:0 0 12px}
+.after ul{margin:6px 0 14px;padding-left:20px}
+.after li{margin:3px 0}
+.after li::marker,.ad li::marker{color:var(--acc)}
+.seo{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.sim{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px;max-width:600px;width:100%;font-family:Arial,Helvetica,sans-serif}
+.sim .s{display:flex;align-items:center;gap:8px;font-size:.85rem;color:#202124;line-height:1.2}
+.sim .s i{width:20px;height:20px;border-radius:50%;background:#e8eaed;flex:none}
+.sim .u{color:#4d5156;font-size:.78rem;margin:2px 0 4px 28px;overflow-wrap:anywhere}
+.sim .t{color:#1a0dab;font-size:1.15rem;line-height:1.3;margin:0 0 4px;overflow-wrap:anywhere}
+.sim .d{color:#4d5156;font-size:.85rem;line-height:1.5}
+.changes{margin-top:18px;font-size:.9rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;line-height:1.5}
+.changes b{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:4px}
+mark{background:#fff6cf;color:#5b4300;padding:1px 6px;border-radius:4px;border-bottom:2px dashed #d99a06;font-weight:600;font-style:normal;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+ol.fill{margin:8px 0 0;padding-left:22px;font-size:.92rem}
+ol.fill li{margin:6px 0}
+ol.fill li::marker{color:#9a6b00;font-weight:700}
+.note{background:#fff8e1;border:1px solid #f3e2a3;border-radius:10px;padding:12px 14px;font-size:.9rem;color:#5f4b00;margin-top:26px}
+.wrap>.note:only-child{margin-bottom:44px}
+/* offer */
+section.offer{padding:48px 0;background:#0f172a;color:#fff}
+.offer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:start}
+@media(max-width:820px){.offer .wrap{grid-template-columns:1fr}}
+.offer h2{font-size:clamp(1.5rem,2.4vw,1.8rem);margin:6px 0 10px;letter-spacing:-.02em}
+.offer p{color:#cbd5e1;margin:0 0 12px}
+.price{font-size:1.5rem;font-weight:800;margin:14px 0 4px}
+.price small{display:block;font-size:.95rem;font-weight:500;color:#cbd5e1;margin-top:2px}
+.offer ul{color:#e2e8f0;padding-left:20px;margin:10px 0 18px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;font-weight:800;text-decoration:none;font-size:.95rem}
+.btn.y{background:var(--hl);color:#1f2937}.btn.g{background:transparent;color:#fff;border:1.5px solid #94a3b8}
+.alt{margin-top:12px;font-size:.9rem;color:#cbd5e1;overflow-wrap:anywhere}
+.alt a{color:#fff;font-weight:600}
+.box{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:18px 20px;font-size:.92rem;color:#cbd5e1;overflow-wrap:anywhere}
+.box b{color:#fff}
+.box a{color:#e2e8f0;font-weight:600}
+footer{padding:22px 0 40px;font-size:.82rem;color:var(--mute);overflow-wrap:anywhere}
+/* reveal on scroll (JS-gated so no-JS shows everything) */
+.js .rv{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
+.js .rv.in{opacity:1;transform:none}
+/* sticky mobile bar */
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;align-items:center;justify-content:space-between;gap:10px;padding:8px 14px calc(8px + env(safe-area-inset-bottom));background:rgba(15,23,42,.96);color:#e2e8f0;font-size:.86rem;transform:translateY(110%);transition:transform .3s ease}
+.stick b{color:#fff}.stick .btn{padding:9px 14px;font-size:.88rem;white-space:nowrap;flex:none}
+.stick.on{transform:none}
+@media(max-width:820px){.js .stick{display:flex}body.js-pad{padding-bottom:64px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.js .pane.on{animation:none}.stick{transition:none}}
+
+.ad{max-width:720px}
+.ad h2{font-size:1.3rem;margin:0 0 8px;letter-spacing:-.01em}
+.ad h3{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:18px 0 6px}
+.ad ul{margin:0;padding-left:20px}.ad li{margin:4px 0}
+.before .ex{border-left:3px solid #cbd2dc;padding-left:12px;margin:10px 0;color:var(--mute);font-style:italic}
+.flaws{margin:16px 0 0;padding:12px 0 0;list-style:none;border-top:1px solid #dfe3ea}
+.flaws::before{content:"What it doesn't tell a candidate yet";display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--ink);margin-bottom:6px}
+.flaws li{color:var(--mute);font-size:.9rem;margin:4px 0;padding-left:16px;position:relative}
+.flaws li::before{content:"–";position:absolute;left:0;color:var(--acc);font-weight:700}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+@media(max-width:820px){.why{grid-template-columns:1fr}}
+.why div{background:var(--soft);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--mute);min-width:0}
+.why b{display:block;font-size:1rem;margin-bottom:4px;color:var(--ink);letter-spacing:-.01em}
+.pane.before .old{font-style:italic;color:var(--mute);margin:0}
+.pane.before .old b{display:block;font-style:normal;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+.pane.after h2{font-size:1.15rem}
+h2.tag{margin-top:0;font-size:.8rem}
+</style></head><body>
+<div class="ribbon"><span><b>Free sample</b> for Multifield by Melbourne Digital Partners<span class="long"> — a rewrite of your Carpenter ad. A private, unlisted link; the ad itself hasn't been touched</span>.</span><a href="#offer">Use it?<span aria-hidden="true"> →</span></a></div>
+<header class="hero"><div class="wrap"><div class="kicker">Free sample · before &amp; after · job ad</div><h1>Your next carpenter is scrolling past 56 words.</h1><p class="lead">Your Indeed ad says what you need. It doesn&#x27;t say who Multifield is — building since 1996, commercial and residential, West Melbourne — or why a good framer should pick you over the next ad down. Below is the same role with that said, built only from your ad and your website.</p>
+
+<div class="stage" id="stage">
+  <div class="seg" role="group" aria-label="Before and after">
+    <button type="button" data-show="before" aria-pressed="true">Your ad now</button>
+    <button type="button" data-show="after" aria-pressed="false">Our rewrite</button>
+  </div>
+  <div class="panes">
+    <div class="pane before on"><div class="tag"><span>Your ad now · Indeed</span><span class="wc"><span data-count="56">56</span> words</span></div><p class="old"><b>Carpenter</b>“Carpenter with experience in timber framing required, including handyman skills.”</p></div>
+    <div class="pane after"><div class="tag"><span>Our rewrite</span><span class="wc"><span data-count="156">156</span> words</span></div><h2>Carpenter — timber framing, West Melbourne builder, casual to full-time</h2><p>Timber framing and general carpentry, on the road, casual to start with full-time possible as the work allows, $32.99 to $57.61 an hour. We&#x27;re Multifield Constructions, a West Melbourne builder working since 1996.</p><a class="more" href="#rewrite">Read the full ad<span aria-hidden="true"> ↓</span></a></div>
+  </div>
+</div>
+<div class="meta"><span><b>Business</b> Multifield Constructions Pty Ltd</span><span><b>Where</b> West Melbourne, VIC</span><span><b>Anything under <mark>Confirm before posting</mark></b> is something only you can fill in — hours, a start date, who to contact. We never guess.</span></div></div></header>
+<main>
+<section class="prod" id="rewrite"><div class="wrap"><div class="ba">
+  <div class="col before rv"><h2 class="tag"><span>Your ad now</span><span class="wc"><span data-count="56">56</span> words</span></h2><div class="ex">“Carpenter with experience in timber framing required, including handyman skills.”</div><p class="sub" style="margin:10px 0 0"><a href="https://au.indeed.com/viewjob?jk=62668f7adca029c2" target="_blank" rel="noopener">see the live ad<span aria-hidden="true"> ↗</span><span class="sr"> (opens in a new tab)</span></a></p><ul class="flaws"><li>Nothing about the business — the ad doesn&#x27;t say Multifield has been building since 1996 or what kind of jobs the work is on</li><li>No days or hours to expect from &#x27;as required&#x27; casual work, and no start date</li><li>No way to apply and no contact</li><li>The $32.99–$57.61 range isn&#x27;t explained — what puts someone at the top</li></ul><div class="changes"><b>What changed</b>The original was 56 words with no company description, no hours and no way to apply; this version says who Multifield is in your website&#x27;s own terms, keeps every requirement you listed, and gives applicants a clear next step. The gaps only you can fill are listed under &#x27;Confirm before posting&#x27;.</div></div>
+  <div class="col after ad rv"><div class="tag"><span>Our rewrite</span><span class="wc"><span data-count="156">156</span> words</span></div>
+    <h2>Carpenter — timber framing, West Melbourne builder, casual to full-time</h2><p>Timber framing and general carpentry, on the road, casual to start with full-time possible as the work allows, $32.99 to $57.61 an hour. We&#x27;re Multifield Constructions, a West Melbourne builder working since 1996.</p>
+    <h3>About Multifield</h3><p>We&#x27;ve built commercial and industrial projects since 1996 and do residential developments and building maintenance too. We&#x27;re based on Spencer Street, West Melbourne, and we aim to deliver projects with high-quality finishes within budget and timeframe.</p>
+    <h3>What you'll be doing</h3><ul><li>Timber framing, with handyman-type work as needed</li><li>Working on the road — that&#x27;s the ad&#x27;s work location</li></ul>
+    <h3>What you'll need</h3><ul><li>Carpentry qualification</li><li>Experience in timber framing</li><li>Your own tools</li><li>Current driver&#x27;s licence</li><li>White card</li><li>Australian work rights preferred</li></ul>
+    <h3>What's on offer</h3><ul><li>$32.99 – $57.61 per hour</li><li>Casual to start, on an as-required basis, with potential to go full-time</li><li>Work location: on the road</li></ul>
+    <h3>How to apply</h3><p>Email or call us with a short summary of your framing experience and your licence, white card and qualification details.</p>
+    <h3>Confirm before posting</h3><ol class="fill"><li><mark>What sets the rate within $32.99–$57.61 (experience, casual loading)</mark></li><li><mark>Rough days per week to expect, and a start date</mark></li><li><mark>Add 2–3 specifics of a typical day</mark></li><li><mark>Name, phone and email to put on the ad</mark></li></ol></div>
+</div>
+<div class="kicker" style="margin-top:34px">Why this version should do better</div>
+<div class="why"><div class="rv"><b>Pay explained</b>Your ad already shows a range — that's the hard part done. SEEK's research says showing pay draws more applications; this version keeps your figures and asks what sets the rate.</div><div class="rv"><b>Laid out to be scanned</b>Indeed's candidate research says clarity and formatting shape whether people apply. Short sections, in the order a candidate reads them.</div><div class="rv"><b>A reason to apply</b>Your ad says what you need. This version also says who you are and what the week looks like — the things a good carpenter decides on.</div></div>
+<div class="note rv"><b>How we wrote this.</b> Every fact comes from your ad or your website. We added no pay, hours, perks or claims you didn't state — the gaps are listed under "Confirm before posting" for you to fill. Only short quotes from your ad appear here; the ad itself stays yours and stays on the job board.</div></div></section>
+</main>
+<section class="offer" id="offer" tabindex="-1"><div class="wrap"><div><div class="kicker" style="color:#fde68a">For the owner of Multifield</div><h2>Use it. Fill the gaps, paste it in.</h2><p>You're welcome to use what's here as it stands. If you'd rather we finish it: reply with the two or three things under "Confirm before posting" and we send back the completed ad, ready to paste into Indeed or SEEK, plus a shorter version for Facebook and your website.</p>
+<div class="price">$149 for this ad <small>$99 for each one after · position description +$120</small></div>
+<ul><li>Back to you within two business days of your details</li><li>One round of changes included</li><li>Pay when you've read it — if it's not better than what you have, you owe nothing</li></ul>
+<div class="btns"><a class="btn y" href="mailto:melbournedigitalpartners@gmail.com?subject=Re%3A%20Your%20carpenter%20ad%20on%20Indeed%2C%20rewritten&amp;body=Yes%20%E2%80%94%20finish%20the%20ad.%0A%0ARough%20days%20per%20week%20and%20a%20start%20date%3A%20%0AWhat%20puts%20someone%20at%20the%20top%20of%20the%20%2432.99%E2%80%93%2457.61%20range%3A%20%0AA%20name%20and%20number%20to%20put%20on%20the%20ad%3A%20%0A%0A">Yes — finish this ad</a></div>
+<p class="alt">or just reply to our email · <a href="mailto:melbournedigitalpartners@gmail.com">melbournedigitalpartners@gmail.com</a></p></div>
+<div class="box"><b>About this page.</b> Made by Melbourne Digital Partners as an unsolicited sample. Not indexed, not public, reachable only by this link; Multifield has not approved or paid for it. If you'd rather it didn't exist, <a href="mailto:melbournedigitalpartners@gmail.com?subject=Re%3A%20Your%20carpenter%20ad%20on%20Indeed%2C%20rewritten&amp;body=Please%20take%20the%20sample%20page%20down.%0A">ask us to take this page down</a> and it's gone within one business day.</div></div></section>
+<footer><div class="wrap">Melbourne Digital Partners · melbournedigitalpartners@gmail.com · Melbourne · Sample prepared 17 September 2026</div></footer>
+<div class="stick" id="stick" aria-hidden="true"><span><b>$149 for this ad</b> · pay when you've read it</span><a class="btn y" href="#offer">Use it?</a></div>
+<script>
+(function(){
+var d=document,rm=matchMedia('(prefers-reduced-motion: reduce)').matches,IO='IntersectionObserver' in window;
+function q(s,r){return [].slice.call((r||d).querySelectorAll(s));}
+function ob(els,fn,o){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fn(e.target);io.unobserve(e.target);}});},o);els.forEach(function(el){io.observe(el);});}
+d.documentElement.classList.add('js');
+var rv=q('.rv');
+function all(){rv.forEach(function(el){el.classList.add('in');});}
+if(IO&&!rm){ob(rv,function(el){el.classList.add('in');},{rootMargin:'0px 0px -8% 0px'});setTimeout(all,6000);}else all();
+function cnt(el){var n=+el.dataset.count,t0=null;function f(t){t0=t0||t;var k=Math.min(1,(t-t0)/650);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+if(!rm&&IO){var cs=q('[data-count]');cs.forEach(function(el){el.textContent='0';});ob(cs,cnt,{threshold:.6});}
+var st=d.querySelector('.stage');
+if(st){var bs=q('.seg button',st),ps=q('.pane',st);
+function show(w){bs.forEach(function(b){b.setAttribute('aria-pressed',''+(b.dataset.show===w));});ps.forEach(function(p){p.classList.toggle('on',p.classList.contains(w));});}
+bs.forEach(function(b){b.onclick=function(){show(b.dataset.show);};});
+if(rm||!IO)show('after');else ob([st],function(){setTimeout(function(){show('after');},1400);},{threshold:.5});}
+var bar=d.getElementById('stick'),hero=d.querySelector('header.hero'),offer=d.getElementById('offer');
+if(bar&&hero&&offer&&IO){d.body.classList.add('js-pad');var hi=true,oi=false;
+function upd(){var on=!hi&&!oi;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',''+!on);}
+new IntersectionObserver(function(es){hi=es[0].isIntersecting;upd();},{threshold:0}).observe(hero);
+new IntersectionObserver(function(es){oi=es[0].isIntersecting;upd();},{threshold:.15}).observe(offer);}
+})();
+</script>
+</body></html>
