@@ -1,63 +1,176 @@
-<!doctype html><html><head><meta charset="utf-8"><title>CSC Civil Constructions — Capability Statement (draft)</title><meta name="robots" content="noindex,nofollow"><style>
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSC Civil Constructions — capability statement draft</title>
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<style>
+:root { --ink:#1a1a1a; --bg:#e9ecf1; --card:#fff; --mute:#5a6270; --line:#d9dee7; --y:#ffd23f; --dark:#111827; }
+* { box-sizing:border-box; }
+html, body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+body { overflow-x:hidden; }
+a { color:inherit; }
+.ribbon { background:var(--dark); color:#e5e7eb; font-size:13px; padding:8px 16px; text-align:center; line-height:1.4; }
+.ribbon b { color:#fff; }
+.wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+.hero { padding:36px 0 18px; }
+.hero h1 { font-size:clamp(24px,4.5vw,36px); line-height:1.15; margin:0 0 10px; letter-spacing:-.01em; }
+.hero p { font-size:17px; line-height:1.5; margin:0; color:#2a3140; max-width:720px; }
+.hero .hook { font-weight:600; color:var(--ink); }
+.sheets { display:grid; gap:24px; justify-items:center; padding:12px 0 8px; }
+.scale { width:210mm; transform-origin:top left; }
+.scalebox { overflow:hidden; padding-bottom:12px; }
+.pdfrow { text-align:center; padding:4px 0 10px; font-size:15px; }
+.pdfrow a { display:inline-block; padding:12px 18px; border:1px solid #9aa3b2; border-radius:8px; text-decoration:none; font-weight:600; background:#fff; min-height:44px; }
+.sheet { box-shadow:0 10px 30px rgba(0,0,0,.14); }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:16px; padding:18px 0; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+.card h2 { font-size:15px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 10px; color:#3b4252; }
+.card p, .card li { font-size:15px; line-height:1.55; }
+.card ul { margin:0; padding-left:18px; }
+.card li { margin:0 0 6px; }
+.offer { background:var(--dark); color:#f3f4f6; border-radius:12px; padding:26px 22px; margin:8px 0 22px; }
+.offer .price { font-size:44px; font-weight:800; letter-spacing:-.02em; line-height:1; margin:0 0 6px; }
+.offer .price small { display:block; font-size:16px; font-weight:500; color:#cbd5e1; line-height:1.5; margin-top:10px; }
+.offer ul { margin:12px 0 18px; padding-left:18px; color:#e5e7eb; font-size:15px; line-height:1.55; }
+.btn { display:inline-block; background:var(--y); color:#111; font-weight:800; font-size:17px; padding:14px 22px; border-radius:8px; text-decoration:none; min-height:48px; line-height:1.2; }
+.btn:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+.offer .alt { margin:14px 0 0; font-size:14px; color:#cbd5e1; overflow-wrap:anywhere; }
+.offer .alt code { background:#1f2937; padding:2px 6px; border-radius:4px; color:#fff; font-size:14px; }
+.about { font-size:14px; color:var(--mute); line-height:1.55; }
+.about a { color:#3b4252; }
+footer { text-align:center; font-size:13px; color:var(--mute); padding:10px 0 40px; line-height:1.6; }
+@media print {
+  .ribbon, .hero, .cards, .offer, footer, .about, .pdfrow { display:none !important; }
+  html, body { background:#fff; }
+  .wrap { max-width:none; padding:0; margin:0; }
+  .sheets { display:block; padding:0; gap:0; }
+  .scale { transform:none !important; width:210mm; }
+  .scalebox { height:auto !important; }
+  .sheet { box-shadow:none; }
+}
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .12s ease; } .btn:hover { transform: translateY(-1px); } }
+
 @page { size: A4; margin: 0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; color:#1a1a1a; }
-.page { width:210mm; height:297mm; position:relative; overflow:hidden; page-break-after:always; background:#fff; }
-.page:last-child { page-break-after:auto; }
+.sheet { width:210mm; height:297mm; position:relative; overflow:hidden; background:#fff; color:#1a1a1a;
+  font-family: "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; break-after:page; page-break-after:always; }
+.sheet:last-of-type { break-after:auto; page-break-after:auto; }
+.sheet * { box-sizing:border-box; }
 .wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; z-index:5; }
-.wm span { font-size:92px; font-weight:900; color:rgba(0,0,0,.055); transform:rotate(-28deg); letter-spacing:.08em; white-space:nowrap; }
-.band { background:var(--a); color:#fff; padding:22mm 18mm 14mm; }
-.band .kicker { text-transform:uppercase; letter-spacing:.18em; font-size:9pt; opacity:.85; font-weight:700; }
-.band h1 { margin:6px 0 4px; font-size:28pt; line-height:1.08; font-weight:800; letter-spacing:-.01em; }
-.band .one { font-size:12pt; opacity:.95; margin-top:6px; max-width:150mm; }
-.band .cap { position:absolute; right:18mm; top:14mm; font-size:9pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
-.body { padding:10mm 18mm 0; }
-h2 { font-size:9.5pt; text-transform:uppercase; letter-spacing:.16em; color:var(--a); margin:0 0 6px; font-weight:800; }
-p { margin:0 0 8px; font-size:10.5pt; line-height:1.5; }
-.cols { display:grid; grid-template-columns: 1.25fr 1fr; gap:10mm; }
-.glance { background:#f4f6f9; border-left:4px solid var(--a); padding:10px 12px; font-size:9.6pt; }
+.wm span { font-size:88px; font-weight:900; color:rgba(0,0,0,.05); transform:rotate(-28deg); letter-spacing:.08em; white-space:nowrap; }
+.band { background:var(--a); color:#fff; padding:22mm 16mm 14mm; position:relative; }
+.band .kicker { text-transform:uppercase; letter-spacing:.18em; font-size:8.5pt; opacity:.85; font-weight:700; }
+.band h1 { margin:6px 0 6px; font-size:30pt; line-height:1.08; font-weight:800; letter-spacing:-.01em; }
+.band .one { font-size:12.5pt; opacity:.95; margin-top:5px; max-width:160mm; line-height:1.35; }
+.band .cap { position:absolute; right:16mm; top:10mm; font-size:8.5pt; font-weight:700; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+.sb { padding:12mm 16mm 0; }
+.sb .sec { margin-bottom:9mm; }
+.sb p { font-size:10.8pt; line-height:1.55; }
+.sb .svc li { font-size:10.6pt; padding:7px 0 7px 14px; }
+.sb .svc li:before { top:13px; }
+.sb .glance { font-size:10pt; padding:10px 12px; }
+.sb .glance div { padding:6px 0; }
+.sb .chips li { font-size:9.6pt; padding:4px 11px; margin:0 6px 6px 0; }
+.sb h2 { font-size:10pt; margin-bottom:7px; }
+.sb2 { padding:9mm 16mm 0; }
+.strip { background:var(--a); color:#fff; padding:6mm 16mm; display:flex; justify-content:space-between; font-size:9pt; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.sheet h2 { font-size:9pt; text-transform:uppercase; letter-spacing:.16em; color:var(--a); margin:0 0 5px; font-weight:800; }
+.sheet p { margin:0 0 6px; font-size:10pt; line-height:1.48; }
+.cols { display:grid; grid-template-columns: 1.3fr 1fr; gap:8mm; }
+.glance { background:#f4f6f9; border-left:4px solid var(--a); padding:8px 11px; font-size:9.3pt; }
 .glance div { display:flex; gap:8px; padding:4px 0; border-bottom:1px solid #e3e7ee; }
 .glance div:last-child { border:0; }
-.glance b { min-width:64px; color:#333; }
-ul { margin:0; padding-left:0; list-style:none; }
-.svc { display:grid; grid-template-columns:1fr 1fr; gap:6px 14px; }
-.svc li { font-size:10pt; padding:7px 0 7px 14px; border-bottom:1px solid #e9ecf1; position:relative; }
-.svc li:before { content:""; position:absolute; left:0; top:13px; width:6px; height:6px; background:var(--a); border-radius:1px; }
-.chips li { display:inline-block; font-size:9pt; background:#eef2f7; border:1px solid #dfe5ee; border-radius:999px; padding:3px 10px; margin:0 6px 6px 0; }
-.proj { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.proj li { background:#fafbfd; border:1px solid #e6eaf0; border-radius:6px; padding:10px 12px; font-size:9.8pt; }
-.proj li b { display:block; color:var(--a); margin-bottom:3px; }
-.proj li small { color:#666; }
-.sec { margin-bottom:9mm; }
-.foot { position:absolute; left:0; right:0; bottom:0; padding:8mm 18mm 10mm; font-size:8.6pt; color:#555; border-top:1px solid #e6eaf0; display:flex; justify-content:space-between; gap:20px; }
+.glance b { min-width:62px; color:#333; flex:none; }
+.sheet ul { margin:0; padding-left:0; list-style:none; }
+.svc { display:grid; grid-template-columns:1fr 1fr; gap:4px 12mm; }
+.svc li { font-size:9.8pt; padding:5px 0 5px 13px; border-bottom:1px solid #e9ecf1; position:relative; }
+.svc li:before { content:""; position:absolute; left:0; top:11px; width:6px; height:6px; background:var(--a); border-radius:1px; }
+.chips li { display:inline-block; font-size:8.8pt; background:#eef2f7; border:1px solid #dfe5ee; border-radius:999px; padding:3px 10px; margin:0 5px 5px 0; }
+.chips li.award { background:#fff8e1; border-color:#f0dc9a; }
+.note { font-size:8pt; color:#666; margin:2px 0 0; }
+.sec { margin-bottom:6.5mm; }
+.details { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px 10mm; font-size:9.3pt; }
+.details div { border-bottom:1px dotted #b9c0cc; padding:3px 0 5px; min-height:9mm; }
+.details div b { display:block; font-size:7.6pt; text-transform:uppercase; letter-spacing:.1em; color:#666; margin-bottom:2px; }
+.details div i { color:#8a8f98; font-style:normal; font-size:8.6pt; }
+table.proj { width:100%; border-collapse:collapse; font-size:9.2pt; }
+table.proj th { text-align:left; font-size:7.8pt; text-transform:uppercase; letter-spacing:.1em; color:#666; border-bottom:2px solid var(--a); padding:4px 6px 5px; font-weight:700; }
+table.proj td { padding:6px 6px; border-bottom:1px solid #e6eaf0; vertical-align:top; }
+table.proj td.n { font-weight:700; color:var(--a); }
+table.proj td.dim { color:#9aa0aa; }
+.slot td { color:#9aa0aa; border-bottom:1px dotted #b9c0cc; height:9mm; }
+.foot { position:absolute; left:0; right:0; bottom:0; padding:6mm 16mm 8mm; font-size:8.3pt; color:#555; border-top:1px solid #e6eaf0; display:flex; justify-content:space-between; gap:20px; }
 .foot b { color:#222; }
-.contact { display:grid; grid-template-columns:1fr 1fr; gap:6px 20px; font-size:10pt; }
-.contact div b { display:block; font-size:8.5pt; text-transform:uppercase; letter-spacing:.1em; color:#666; }
-.draftnote { margin-top:6mm; background:#fff8e1; border:1px solid #f3e2a3; border-radius:6px; padding:9px 12px; font-size:9pt; color:#5f4b00; }
-</style></head><body>
-<div class="page" style="--a:#37474f">
-  <div class="wm"><span>DRAFT PREVIEW</span></div>
+.contact { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px 10mm; font-size:9.6pt; }
+.contact div b { display:block; font-size:7.8pt; text-transform:uppercase; letter-spacing:.1em; color:#666; }
+.regions { font-size:9.8pt; line-height:1.5; }
+.motto { font-size:10pt; font-style:italic; color:#333; margin-top:3px; }
+</style></head>
+<body>
+<div class="ribbon">A draft prepared by <b>Melbourne Digital Partners</b> for CSC Civil Constructions · not commissioned or affiliated · nothing here is public or indexed</div>
+<main class="wrap">
+  <section class="hero">
+    <h1>A two-page capability statement for CSC Civil Constructions, drafted from your own website</h1>
+    <p class="hook">“VicRoads Accredited Contractor - Road Construction R2” is on csccivil.com.au but not in a document you can attach to a tender. We drafted the two pages that usually go with it.</p>
+  </section>
+  <section class="sheets" id="sheets">
+    <div class="scalebox"><div class="scale">
+<div class="sheet" style="--a:#37474f" aria-label="Capability statement page 1">
+  <div class="wm" aria-hidden="true"><span>DRAFT PREVIEW</span></div>
   <div class="band"><div class="cap">Capability Statement</div>
-    <div class="kicker">Civil contractor · Vermont VIC 3133</div>
+    <div class="kicker">Civil contractor · Vermont VIC</div>
     <h1>CSC Civil Constructions</h1>
     <div class="one">Vermont-based civil contractor for subdivisions, retirement villages, car parks and road works across Melbourne.</div>
   </div>
-  <div class="body">
+  <div class="sb">
     <div class="cols">
-      <div class="sec"><h2>Who we are</h2><p>CSC Civil Constructions was founded in 1990 by Ron Scoble and is based in Vermont, operating across metropolitan Melbourne. It built its early niche in greenfield subdivisions, bulk earthworks and road construction in outer south-east Melbourne. Today it focuses on retirement villages, medium-density developments, subdivisions, car parks, drainage and pavement works, with VicRoads R2 and Places Victoria C2M accreditation.</p></div>
-      <div class="sec"><h2>At a glance</h2><div class="glance"><div><b>Est.</b><span>1990 · Directors Brent Scoble and Ivan Grzan</span></div><div><b>Based</b><span>Vermont VIC 3133</span></div><div><b>Regions</b><span>Melbourne metropolitan area, outer south-east Melbourne</span></div><div><b>Certified</b><span>VicRoads Accredited Contractor - Road Construction R2 · Places Victoria Accredited Contractor - C2M · VEDN Accredited Civil Contractor · Code Compliant Enterprise Agreement</span></div></div></div>
+      <div class="sec"><h2>Who we are</h2><p>CSC Civil Constructions was founded in 1990 and is based in Vermont, operating across metropolitan Melbourne. It built its early niche in greenfield subdivisions, bulk earthworks and road construction in outer south-east Melbourne. Today it focuses on retirement villages, medium-density developments, subdivisions, car parks, drainage and pavement works, with VicRoads R2 and Places Victoria C2M accreditation.</p></div>
+      <div class="sec"><h2>At a glance</h2><div class="glance"><div><b>Est.</b><span>1990</span></div><div><b>Ownership</b><span>Directors Brent Scoble and Ivan Grzan</span></div><div><b>Based</b><span>Vermont VIC</span></div><div><b>Service area</b><span>Melbourne metropolitan area, outer south-east Melbourne</span></div><div><b>ABN</b><span>28 611 000 625</span></div></div></div>
     </div>
-    <div class="sec"><h2>What we do</h2><ul class="svc"><li>Medium density and unit developments</li><li>Retirement villages</li><li>Residential and commercial subdivisions</li><li>Car park construction</li><li>Road widening and slip lanes</li><li>Pavement and footpath construction</li><li>Bulk earthworks and building excavations</li><li>Trenching and conduit laying (VEDN)</li><li>Drainage and wetlands</li><li>Survey work</li></ul></div>
-    <div class="sec"><h2>Accreditations &amp; memberships</h2><ul class="chips"><li>VicRoads Accredited Contractor - Road Construction R2</li><li>Places Victoria Accredited Contractor - C2M</li><li>VEDN Accredited Civil Contractor</li><li>Code Compliant Enterprise Agreement</li><li>Civil Contractors Federation (CCF) member</li><li>Association of Land Development Engineers (ALDE) member</li></ul></div>
+    <div class="sec"><h2>What we do</h2><ul class="svc"><li>Medium density and unit developments</li><li>Retirement villages</li><li>Residential and commercial subdivisions</li><li>Car park construction</li><li>Road widening and slip lanes</li><li>Pavement and footpath construction</li><li>Bulk earthworks and building excavations</li><li>Trenching and conduit laying: VEDN</li><li>Drainage and wetlands</li><li>Survey work</li></ul></div>
+    <div class="sec"><h2>Accreditations, prequalifications and memberships</h2><ul class="chips"><li>VicRoads Accredited Contractor - Road Construction R2</li><li>Places Victoria Accredited Contractor - C2M</li><li>VEDN Accredited Civil Contractor</li><li>Code Compliant Enterprise Agreement</li><li>Civil Contractors Federation member</li><li>Association of Land Development Engineers member</li></ul><p class="note">As stated on csccivil.com.au. Certificate numbers and expiry dates to be added from your documents.</p></div>
   </div>
-  <div class="foot"><span><b>CSC Civil Constructions</b> · +61 3 8872 7100 · http://www.csccivil.com.au/</span><span>Page 1 of 2</span></div>
-</div>
-<div class="page" style="--a:#37474f">
-  <div class="wm"><span>DRAFT PREVIEW</span></div>
-  <div class="body" style="padding-top:18mm">
-    <div class="sec"><h2>Who we work with</h2><ul class="chips"><li>retirement village operators</li><li>residential builders and developers</li><li>Tigcorp</li><li>Australian Unity</li><li>Glenvill</li><li>JG King Homes</li><li>John Holland</li><li>AV Jennings</li></ul></div><div class="sec"><h2>Plant &amp; capacity</h2><p>2 x 20t excavators, 5t excavator, backhoe, positrack, roller, 11 utes, 6 site sheds</p></div>
-    <div class="sec"><h2>Contact</h2><div class="contact"><div><b>Phone</b>+61 3 8872 7100</div><div><b>Email</b>admin@csccivil.com.au</div><div><b>Web</b>http://www.csccivil.com.au/</div><div><b>Address</b>13 Trade Place, Vermont VIC 3133</div><div><b>ABN</b>28 611 000 625</div></div></div>
-    <div class="draftnote"><b>About this draft.</b> Prepared by Melbourne Digital Partners from CSC Civil Constructions's own website. Every line is editable — we'll add your logo, photos, insurances, licence numbers and anything we've missed, and remove anything that's wrong. Print-ready PDF plus the editable file: <b>$490</b>. Reply to the email you received or write to melbournedigitalpartners@gmail.com.</div>
+  <div class="foot"><span><b>CSC Civil Constructions</b> · +61 3 8872 7100 · csccivil.com.au</span><span>Page 1 of 2</span></div>
+</div></div></div>
+    <div class="scalebox"><div class="scale">
+<div class="sheet" style="--a:#37474f" aria-label="Capability statement page 2">
+  <div class="wm" aria-hidden="true"><span>DRAFT PREVIEW</span></div>
+  <div class="strip"><span>CSC Civil Constructions</span><span>Capability Statement</span></div>
+  <div class="sb2">
+    <div class="sec"><h2>Selected projects</h2><table class="proj"><tr><th>Project</th><th>Client</th><th>Scope</th><th>Value</th><th>Year</th></tr><tr class="slot"><td>Project 1</td><td></td><td></td><td></td><td></td></tr><tr class="slot"><td>Project 2</td><td></td><td></td><td></td><td></td></tr><tr class="slot"><td>Project 3</td><td></td><td></td><td></td><td></td></tr><tr class="slot"><td>Project 4</td><td></td><td></td><td></td><td></td></tr></table><p class="note">No named projects on csccivil.com.au. Four rows reserved; client, value and year are what panels look for.</p></div>
+    <div class="cols">
+      <div><div class="sec"><h2>Plant and equipment</h2><p>2 x 20t excavators, 5t excavator, backhoe, positrack, roller, 11 utes, 6 site sheds</p></div></div>
+      <div><div class="sec"><h2>Service area</h2><p class="regions">Melbourne metropolitan area, outer south-east Melbourne</p></div></div>
+    </div>
+    <div class="sec"><h2>Who we work with</h2><ul class="chips"><li>retirement village operators</li><li>residential builders and developers</li><li>Tigcorp</li><li>Australian Unity</li><li>Glenvill</li><li>JG King Homes</li><li>John Holland</li><li>AV Jennings</li></ul></div>
+    <div class="sec"><h2>Company details</h2><div class="details"><div><b>ABN</b>28 611 000 625</div><div><b>ACN</b><i>to be supplied</i></div><div><b>Public liability insurance</b><i>to be supplied</i></div><div><b>Workers compensation</b><i>to be supplied</i></div><div><b>Contract works insurance</b><i>to be supplied</i></div><div><b>Licences</b><i>as applicable</i></div></div></div>
+    <div class="sec"><h2>Key personnel</h2><table class="proj"><tr><th>Role</th><th>Years in civil</th><th>Qualifications and tickets</th></tr><tr class="slot"><td>Director</td><td></td><td></td></tr><tr class="slot"><td>Project manager</td><td></td><td></td></tr><tr class="slot"><td>Site supervisor</td><td></td><td></td></tr><tr class="slot"><td>HSEQ</td><td></td><td></td></tr></table><p class="note">Roles only; no names needed on a capability statement. Typical panel asks: director, project manager, site supervisor, HSEQ.</p></div>
+    <div class="sec"><h2>Contact</h2><div class="contact"><div><b>Phone</b>+61 3 8872 7100</div><div><b>Email</b>admin@csccivil.com.au</div><div><b>Web</b>csccivil.com.au</div><div><b>Location</b>Vermont VIC</div></div></div>
   </div>
-  <div class="foot"><span>Draft prepared by Melbourne Digital Partners · melbournedigitalpartners@gmail.com · Not affiliated with CSC Civil Constructions until commissioned.</span><span>Page 2 of 2</span></div>
-</div></body></html>
+  <div class="foot"><span>Draft prepared by Melbourne Digital Partners from csccivil.com.au · melbournedigitalpartners@gmail.com · Not affiliated with CSC Civil Constructions until commissioned.</span><span>Page 2 of 2</span></div>
+</div></div></div>
+  </section>
+  <p class="pdfrow"><a href="capability-statement-draft.pdf">Open the two pages as a PDF</a></p>
+  <section class="cards">
+    <div class="card"><h2>How we made this</h2>
+      <p>Every line comes from csccivil.com.au: <a href="https://www.csccivil.com.au/" rel="noopener nofollow">csccivil.com.au</a>, <a href="https://www.csccivil.com.au/company.php" rel="noopener nofollow">csccivil.com.au/company.php</a>, <a href="https://www.csccivil.com.au/accreditation.php" rel="noopener nofollow">csccivil.com.au/accreditation.php</a>, <a href="https://www.csccivil.com.au/projects.php" rel="noopener nofollow">csccivil.com.au/projects.php</a>, <a href="https://www.csccivil.com.au/equipment.php" rel="noopener nofollow">csccivil.com.au/equipment.php</a>, <a href="https://www.csccivil.com.au/contact.php" rel="noopener nofollow">csccivil.com.au/contact.php</a>. We did not add awards, years, clients or plant you have not published. Names of people are left off on purpose. Accreditations appear as your site states them; we have not verified them with the issuing bodies, and the final version cites certificate numbers you provide.</p></div>
+    <div class="card"><h2>For you to confirm</h2><ul><li>ABN and insurances</li><li>Named projects with client and year</li><li>Key personnel roles</li></ul></div>
+  </section>
+  <section class="offer" aria-labelledby="offer-h">
+    <h2 id="offer-h" style="font-size:15px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px;color:#cbd5e1">Finish it</h2>
+    <p class="price">$490<small>Print-ready PDF + an editable Word version of the text and tables (design stays as the PDF). Two business days from when your logo, ABN and insurance details arrive. Pay after you've seen the final.</small></p>
+    <ul>
+      <li>Your logo, ABN, insurances, licence and certificate numbers added; anything wrong removed.</li>
+      <li>If it is not right, you owe nothing.</li>
+      <li>Invoice with ABN on request; prices in AUD, no GST.</li>
+    </ul>
+    <a class="btn" href="mailto:melbournedigitalpartners@gmail.com?subject=Re%3A%20A%20draft%20capability%20statement%20for%20CSC%20Civil%20Constructions&amp;body=Yes%20please%20%E2%80%94%20finish%20the%20capability%20statement%20for%20CSC%20Civil%20Constructions.%0A%0ALogo%20attached%3A%20%0AABN%3A%20%0AInsurances%3A%20%0AAnything%20to%20remove%3A%20%0A">Yes — finish our capability statement</a>
+    <p class="alt">or just reply to our email · <code>melbournedigitalpartners@gmail.com</code></p>
+  </section>
+  <p class="about">This page is only reachable from the link we emailed and comes down three weeks after that email. Not you, or not wanted? <a href="mailto:melbournedigitalpartners@gmail.com?subject=Take%20down%20the%20CSC%20Civil%20Constructions%20draft">Ask us to take this page down</a> and it will be gone the same day.</p>
+</main>
+<footer>Melbourne Digital Partners · Melbourne · melbournedigitalpartners@gmail.com</footer>
+<script>
+(function(){var W=793.7;function fit(){var w=Math.min(document.documentElement.clientWidth,960)-32;var s=Math.min(1,w/W);
+document.querySelectorAll('.scalebox').forEach(function(b){var sc=b.firstElementChild;sc.style.transform='scale('+s+')';b.style.height=(1122.5*s)+'px';b.style.width=(W*s)+'px';});}
+if(!window.matchMedia||!window.matchMedia('print').matches){fit();window.addEventListener('resize',fit);}})();
+</script>
+</body></html>
