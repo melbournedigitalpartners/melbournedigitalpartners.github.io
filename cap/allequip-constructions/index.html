@@ -43,6 +43,7 @@ footer { text-align:center; font-size:13px; color:var(--mute); padding:10px 0 40
   html, body { background:#fff; }
   .wrap { max-width:none; padding:0; margin:0; }
   .sheets { display:block; padding:0; gap:0; }
+  .scalebox, .scale { margin:0 !important; padding:0 !important; gap:0 !important; display:block !important; }
   .scale { transform:none !important; width:210mm; }
   .scalebox { height:auto !important; }
   .sheet { box-shadow:none; }
@@ -51,8 +52,12 @@ footer { text-align:center; font-size:13px; color:var(--mute); padding:10px 0 40
 
 @page { size: A4; margin: 0; }
 .sheet { width:210mm; height:297mm; position:relative; overflow:hidden; background:#fff; color:#1a1a1a;
-  font-family: "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; break-after:page; page-break-after:always; }
-.sheet:last-of-type { break-after:auto; page-break-after:auto; }
+  font-family: "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+/* Each sheet sits inside .scalebox > .scale, so the sheets are NOT adjacent
+   siblings — break on the wrapper. Using break-after on every sheet emitted a
+   trailing blank page; a leftover flex/grid gap pushed a 12px sliver onto a
+   third page, so the gap is zeroed in print too. */
+.scalebox + .scalebox { break-before:page; page-break-before:always; }
 .sheet * { box-sizing:border-box; }
 .wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; z-index:5; }
 .wm span { font-size:88px; font-weight:900; color:rgba(0,0,0,.05); transform:rotate(-28deg); letter-spacing:.08em; white-space:nowrap; }
